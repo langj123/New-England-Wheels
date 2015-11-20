@@ -10,7 +10,6 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-
 		<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<header class="product-header">
@@ -33,7 +32,6 @@ get_header(); ?>
 					</div><!-- overview-cont -->
 				</section><!-- overview -->
 				<?php endif; ?>
-				
 				<?php if(get_field('vehicle_features')): ?>
 				<section class="module-new features">
 					<div class="features-extended">
