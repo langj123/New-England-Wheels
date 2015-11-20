@@ -541,6 +541,7 @@ a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+	color: #0a3352;
 }
 
 .main-navigation ul ul {
@@ -631,7 +632,6 @@ a:active {
 }
 
 #masthead {
-	position: fixed;
 	width: 100%;
 	z-index: 10; /* don't be too greedy with z-indexing */
 	background: rgba(255,255,255,0.92);

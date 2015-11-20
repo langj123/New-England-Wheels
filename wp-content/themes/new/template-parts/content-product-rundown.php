@@ -7,10 +7,18 @@
 						<?php
 						$categories_display = get_field('vehicle_cat_feature');
 						$taxonomy = get_terms($categories_display[0]->taxonomy);
-
+						$i = 0;
+						
 						foreach ($categories_display as $category) {
-							$i = 0;
-							$class = (count($categories_display) % 2 == 0 && count($categories_display) != 1) ? "col-lg-6" : "col-lg-4"; // based off amount of categories to 
+							// get amount of posts for column display purposes
+							if (count($categories_display) % 2 == 0 && count($categories_display) != 1) {
+								$class = "col-lg-6";
+							} elseif (count($categories_display) == 1) {
+								$class= "col-lg-12";
+							}
+							else {
+								$class = "col-lg-4";
+							}
 							$tax =  $categories_display[$i]->taxonomy . "_" . $categories_display[$i]->term_id;
 							$link = get_term_link($category);
 						?>
