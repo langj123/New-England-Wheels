@@ -14,7 +14,7 @@
 							if (count($categories_display) % 2 == 0 && count($categories_display) != 1) {
 								$class = "col-lg-6";
 							} elseif (count($categories_display) == 1) {
-								$class= "col-lg-12";
+								$class = "col-lg-12";
 							}
 							else {
 								$class = "col-lg-4";
@@ -23,8 +23,7 @@
 							$link = get_term_link($category);
 						?>
 						<div class="<?php echo $class; ?>">
-							<div class="image-container">
-								<img src="<?php echo get_field('category_run_down_image', $tax); ?>" />
+							<div class="image-container" style="background-image: url(<?php echo get_field('category_run_down_image', $tax); ?>);">
 								<a href="<?php echo $link; ?>" class="link-button">View Vehicle</a>
 								<div class="product-title">
 									<h2><a href="<?php echo $link; ?>"><?php echo $categories_display[$i]->name; ?></a></h2>

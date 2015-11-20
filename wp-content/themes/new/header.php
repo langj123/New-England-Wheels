@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<header id="masthead" class="site-header col-lg-12" role="banner">
+	<header id="masthead" class="site-header" role="banner">
 		<div class="wrapper">
 
 			<div class="site-branding col-lg-3">
