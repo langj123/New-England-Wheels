@@ -40,7 +40,7 @@ function new_setup() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails', array('post','vehicles') );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -58,7 +58,6 @@ function new_setup() {
 		'gallery',
 		'caption',
 	) );
-
 	/*
 	 * Enable support for Post Formats.
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
@@ -203,7 +202,7 @@ function products_init() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor' )
+		'supports'           => array( 'title', 'editor', 'thumbnail' )
 	);
 
 	register_post_type( 'vehicles', $args );
@@ -250,7 +249,7 @@ function location_init() {
 
 	$args = array(
 		'labels'             => $labels,
-                'description'        => __( 'Description.' ),
+        'description'        => __( 'Description.' ),
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
@@ -262,7 +261,7 @@ function location_init() {
 		'has_archive'        => true,
 		'hierarchical'       => false,
 		'menu_position'      => null,
-		'supports'           => array( 'title', 'editor' )
+		'supports'           => array( 'title', 'editor', 'thumbnail' )
 	);
 
 	register_post_type( 'locations', $args );
@@ -271,3 +270,26 @@ function location_init() {
 /*
 *Register any scripts
 */
+
+/*
+* Number generator function
+*/
+function number_generator($trans) {
+	$number = 0;
+	if (is_int(trans)) {
+		$numbers = array("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twevle", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety", "one hundred");
+		switch ($trans) {
+			case 'value':
+				# code...
+				break;
+			
+			default:
+				# code...
+				break;
+		}
+		return $trans;
+	} else {
+		return $trans;
+	}
+}
+add_filter('after_setup_theme', 'number_generator');

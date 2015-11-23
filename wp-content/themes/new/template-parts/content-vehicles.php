@@ -16,7 +16,7 @@ $args = array(
 		),
 	)
 );
-$numbers = array("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twevle", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety", "one hundred");
+
 // required to obtain header image from category
 $tax = $queried->taxonomy . "_" . $queried->term_id;
 $query = new WP_Query( $args );
@@ -29,34 +29,66 @@ $query = new WP_Query( $args );
 		</div>
 	</header><!-- header -->
 	<?php endif; ?>
+
+	<?php if (function_exists('number_generator')) : ?>
 	<div class="features features-count">
-		<h2>Available on <?php echo $numbers[$query->found_posts]; ?> custom platforms</h2>
+		<h2>Available on <?php echo number_generator($query->found_posts); ?> custom platforms</h2>
 	</div><!-- product count -->
-	<?php if ($query->found_posts > 1) : ?>
-	<div class="features-container">
-		<div class="features features-list">
-			<button>Compare</button>
-		</div>
-		<div class="feature features-table">
-				<table>
-					<tr>
-						<td>Item</td>
-					</tr>
-					<tr>
-						<td>Item</td>
-					</tr>
-					<tr>
-						<td>Item</td>
-					</tr>
-				</table>
-		</div>
-	</div>
-	<?php endif;?>
-	<div class="overview-cont">
+	<?php endif; ?>
 	<?php
 	if ($query->have_posts()) :
 
-		while($query->have_posts()) : $query->the_post();
+		while ($query->have_posts()) : $query->the_post();
+			if ($query->current_post ==  0) : ?>
+			<div class="overview-cont">
+			<?php
+			endif;
+
+			// spec comparison
+			if (function_exists('get_field')) :
+					$specs = array();
+					$specs[] = get_field_object('vehicle_engine');
+					$specs[] = get_field_object('vehicle_gvwr');
+					$specs[] = get_field_object('vehicle_drive');
+					$specs[] = get_field_object('vehicle_wheelbase');
+					$specs[] = get_field_object('vehicle_length');
+					$specs[] = get_field_object('vehicle_height');
+					$specs[] = get_field_object('vehicle_interior_height');
+					$specs[] = get_field_object('vehicle_interior_width');
+
+				?>
+				<?php if (!empty($specs)) : ?>
+
+
+
+
+					<div class="features-container">
+							<div class="features features-list">
+								<button>Compare</button>
+							</div>
+							<div class="feature features-table">
+									<table>
+
+										<?php foreach($specs as $spec) { ?>
+
+										<tr>
+											<td>Item</td>
+											<td>Item</td>
+											<td>Item</td>
+										</tr>
+										<?php } ?>
+									</table>
+							</div><!-- features-table -->
+					</div><!-- .features-container -->
+
+
+
+
+
+				<?php endif;
+			endif;
+
+
 			if (function_exists('get_field')) :
 				// get amount of posts for column display purposes
 				if ($query->found_posts % 2 == 0 && $query->found_posts != 1) {
@@ -68,7 +100,6 @@ $query = new WP_Query( $args );
 					$class = "col-lg-4";
 				}
 				$product_image = get_field('hero_image');
-
 			?>
 			<div class="<?php echo $class; ?>">
 				<div class="image-container" style=" background-image: url(<?php echo $product_image; ?>);">
@@ -78,15 +109,18 @@ $query = new WP_Query( $args );
 							<p><?php echo $categories_display[$i]->description; ?></p>
 						<?php endif; ?>
 					</div><!-- product-desc -->
-				</div>
-			</div>
+				</div><!-- product-title -->
+			</div><!-- .image-container -->
 			<?php
 			endif;
+			if ($query->current_post == 0) : ?>
+				</div><!-- overview-cont -->
+			<?php endif;
 		endwhile;
-		wp_reset_postdata();
-	endif;
-	?>
-	</div><!-- overview-cont -->
+		wp_reset_postdata(); ?>
+
+
+	<?php endif; ?>
 
 </section><!-- overview -->
 

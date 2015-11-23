@@ -1210,6 +1210,7 @@ body {
 	background: #aa1f24 url(images/bars.gif) no-repeat center center;
 }
 .features-table {
+	display: none;
 	position: absolute;
 	width: 100%;
 	z-index: 8;
