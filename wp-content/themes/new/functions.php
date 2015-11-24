@@ -119,6 +119,9 @@ function new_scripts() {
 
 	wp_enqueue_script( 'new-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	if (is_tax('vehicles_categories')) {
+		wp_enqueue_script( 'new-product-spec', get_template_directory_uri() . '/js/product-spec.js', array('jquery'), true );
+	}
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -293,3 +296,72 @@ function number_generator($trans) {
 	}
 }
 add_filter('after_setup_theme', 'number_generator');
+
+/*
+*Table of specs function
+*/
+function table_of_specs($q) {
+	if (function_exists('get_field')) {
+		$specs = array();
+		$total = $q->found_posts;
+
+		for ($z = 0; $z < $q->found_posts; $z++) {
+			$id = $q->posts[$z]->ID;
+			$specs[] = get_field_object('vehicle_engine', $id);
+			$specs[] = get_field_object('vehicle_gvwr', $id);
+			$specs[] = get_field_object('vehicle_drive', $id);
+			$specs[] = get_field_object('vehicle_wheelbase', $id);
+			$specs[] = get_field_object('vehicle_length', $id);
+			$specs[] = get_field_object('vehicle_height', $id);
+			$specs[] = get_field_object('vehicle_interior_height', $id);
+			$specs[] = get_field_object('vehicle_interior_width', $id);
+		}
+
+		if ($total < 10) { // this solution might get unwieldy past 10 products
+
+			$count = sizeof($specs);
+
+			$html = '<div class="features-container">';
+			$html .= '<div class="features features-list"><button>Compare</button></div>';
+			$html .= '<div class="feature features-table">';
+			$html .= '<table>';
+			$rows = "";
+
+			for ($i = 0; $i < $count; $i++) {
+				$rows .= "<tr>";
+
+					for ($x = 0; $x < $total + 1; $x++) {
+
+							if ($total == 2) { // if product count is totaling 2
+								if ($x == 0) {
+									$rows .= "<td>" . $specs[$i]["value"] . "</td>";
+								} else if ($x == 1) {
+									$rows .= "<td>" . $specs[$i]["label"] . "</td>";
+								} else {
+									$rows .= "<td>" . $specs[$i + ($count/2)]["value"] . "</td>";
+								}
+							}
+							elseif ($total > 0) { // for all other product displays
+								if ($x == 0) {
+									$rows .= "<td>" . $specs[$i]["label"] . "</td>";
+								} else if ($x == 1) {
+									$rows .= "<td>" . $specs[$i]["value"] . "</td>";
+								} else {
+									$rows .= "<td>" . $specs[$i + ($count/2)]["value"] . "</td>";
+								}
+							}
+					}
+
+				$rows .= "</tr>";
+
+			}
+			$html .= $rows;
+			$html .= '</table>';
+			$html .= '</div><!-- features-table -->';
+			$html .= '</div><!-- .features-container -->';
+
+			return $html;
+		}
+	}
+}
+add_filter('after_setup_theme', 'table_of_specs');
