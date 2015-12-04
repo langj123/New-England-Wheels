@@ -6,9 +6,8 @@
 					<div class="overview-cont">
 						<?php
 						$categories_display = get_field('vehicle_cat_feature');
-						$taxonomy = get_terms($categories_display[0]->taxonomy);
+						// $taxonomy = get_terms($categories_display[0]->taxonomy);
 						$i = 0;
-						
 						foreach ($categories_display as $category) {
 							// get amount of posts for column display purposes
 							if (count($categories_display) % 2 == 0 && count($categories_display) != 1) {

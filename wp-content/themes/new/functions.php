@@ -113,11 +113,20 @@ add_action( 'widgets_init', 'new_widgets_init' );
  * Enqueue scripts and styles.
  */
 function new_scripts() {
-	wp_enqueue_style( 'new-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'new-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
+	wp_enqueue_script('new-fonts', "https://use.typekit.net/och4sol.js", true);
+
+	wp_enqueue_script('new-fonts-try', get_template_directory_uri() . '/js/fonts-try.js', array('new-fonts'), true);
+
 	wp_enqueue_script( 'new-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	wp_register_style('bootstrap', get_template_directory_uri() . "/style/bootstrap.css" );
+
+	wp_register_style('new-style', get_stylesheet_uri());
+
+	wp_enqueue_style('new-style', get_stylesheet_uri() );
 
 	if (is_tax('vehicles_categories')) {
 		wp_enqueue_script( 'new-product-spec', get_template_directory_uri() . '/js/product-spec.js', array('jquery'), true );
@@ -193,7 +202,7 @@ function products_init() {
 
 	$args = array(
 		'labels'             => $labels,
-                'description'        => __( 'Description.' ),
+        'description'        => __( 'Description.' ),
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,

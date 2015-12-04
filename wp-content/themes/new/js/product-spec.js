@@ -9,7 +9,7 @@ jQuery(document).ready(function( $ ) {
 	// unhide and grow the container to the height of the table within
 	button.click(function(){
 
-		if (done == false) {
+		if (done === false) {
 			tCont.animate({
 				height : tHeight
 			}, duration);
