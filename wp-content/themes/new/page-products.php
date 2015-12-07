@@ -3,7 +3,6 @@
  * Template Name: Products Overview Page
  *
  *
- *
  */
 
 get_header(); ?>

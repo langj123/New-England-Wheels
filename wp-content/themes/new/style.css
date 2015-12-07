@@ -48,7 +48,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: sans-serif;
+	font-family: "futura-pt", sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -274,7 +274,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: "futura-pt", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -654,13 +654,14 @@ a:active {
 	line-height: 0;
 }
 #site-navigation ul li {
-	padding: 30px 20px 10px;
+	padding: 20px 20px 10px;
 	display: inline-block;
 }
 #site-navigation a {
 	text-transform: uppercase;
 	font-style: italic;
-	font-size: 16px
+	font-weight: 700;
+	font-size: 19px;
 }
 @media screen and (min-width: 600px) {
 	.site-branding {
@@ -1033,7 +1034,7 @@ body {
 }
 .slide-content, .product-title {
 	position: absolute;
-	bottom: 8%;
+	bottom: 27%;
 	z-index: 2;
 	text-transform: uppercase;
 	text-shadow: 0 0 0 1px rgba(0,0,0,.3);
@@ -1042,6 +1043,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	color: #ffffff;
 }
 .slider li:before, .overview-cont .image-container:before {
 	position: absolute;
@@ -1232,8 +1234,49 @@ body {
 ## Product page
 
 --------------------------------------------------------------*/
+.post-type-archive-vehicles .product-header {
+	background: url(images/products_header.jpg);
+}
+.post-type-archive-locations .product-header {
+	background: url(images/products_header.jpg);
+}
+.post-type-archive-vehicles .product-header, .post-type-archive-locations .product-header {
+	background-size: cover;
+	background-position: center center;
+	min-height: 600px;
+}
 .product-header {
 	position: relative;
+}
+.section-head .product-title  {
+	text-shadow: 1px 1px #000;
+}
+.section-head .product-title {
+	font-weight: 700;
+	font-style: italic;
+	font-size: 48px;
+	bottom: 19%;
+}
+.term-wheelchair-accessible .section-head .product-title:before, .term-passenger-shuttle .section-head .product-title:before  {
+	content: "";
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto 20px;
+}
+.term-wheelchair-accessible .section-head .product-title:before {
+	background: url(images/wheelchair.svg) no-repeat center center;
+}
+.term-passenger-shuttle .section-head .product-title:before {
+	background: url(images/delivery-arrow.svg) no-repeat center center;
+}
+/*--------------------------------------------------------------
+
+## Location page
+
+--------------------------------------------------------------*/
+.location-cont {
+	background: blue;
 }
 /*--------------------------------------------------------------
 
@@ -1260,4 +1303,12 @@ body {
 --------------------------------------------------------------*/
 .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
 	padding: 0;
+}
+/*--------------------------------------------------------------
+
+## USA map
+
+--------------------------------------------------------------*/
+#Usa-map {
+	max-width: 450px;
 }

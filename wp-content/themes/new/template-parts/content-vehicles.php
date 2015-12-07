@@ -12,6 +12,7 @@ $args = array(
 );
 // required to obtain header image from category
 $tax = $queried->taxonomy . "_" . $queried->term_id;
+
 $query = new WP_Query( $args );
 
 ?>
@@ -20,14 +21,31 @@ $query = new WP_Query( $args );
 	<?php if (function_exists('get_field')) : ?>
 	<header class="section-head">
 		<div class="image-container" style="background-image: url(<?php echo get_field('category_hero_image', $tax); ?>);">
-			<h1 class="product-title">Shuttles</h1>
+			<?php 
+			if ($queried->name) :
+			?>
+			<h1 class="product-title">
+
+				<?php echo $queried->name; ?>
+
+			</h1>
+			<?php endif; ?>
+			<?php 
+			if ($queried->description) :
+			?>
+			<p class="product-desc">
+
+				<?php echo $queried->description; ?>
+
+			</p>
+			<?php endif; ?>
 		</div>
 	</header><!-- header -->
 	<?php endif; ?>
 
 	<?php if (function_exists('number_generator')) : ?>
 	<div class="features features-count">
-		<h2>Available on <?php echo number_generator($query->found_posts); ?> custom platforms</h2>
+		<h2>Available on <?php echo number_generator($query->found_posts); ?> customizable platforms</h2>
 	</div><!-- product count -->
 	<?php endif; ?>
 
