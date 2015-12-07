@@ -1234,6 +1234,17 @@ body {
 ## Product page
 
 --------------------------------------------------------------*/
+.post-type-archive-vehicles .product-header {
+	background: url(images/products_header.jpg);
+}
+.post-type-archive-locations .product-header {
+	background: url(images/products_header.jpg);
+}
+.post-type-archive-vehicles .product-header, .post-type-archive-locations .product-header {
+	background-size: cover;
+	background-position: center center;
+	min-height: 600px;
+}
 .product-header {
 	position: relative;
 }
@@ -1258,6 +1269,14 @@ body {
 }
 .term-passenger-shuttle .section-head .product-title:before {
 	background: url(images/delivery-arrow.svg) no-repeat center center;
+}
+/*--------------------------------------------------------------
+
+## Location page
+
+--------------------------------------------------------------*/
+.location-cont {
+	background: blue;
 }
 /*--------------------------------------------------------------
 

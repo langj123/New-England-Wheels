@@ -96,18 +96,18 @@ add_action( 'after_setup_theme', 'new_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function new_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'new' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'new_widgets_init' );
+// function new_widgets_init() {
+// 	register_sidebar( array(
+// 		'name'          => esc_html__( 'Sidebar', 'new' ),
+// 		'id'            => 'sidebar-1',
+// 		'description'   => '',
+// 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+// 		'after_widget'  => '</aside>',
+// 		'before_title'  => '<h2 class="widget-title">',
+// 		'after_title'   => '</h2>',
+// 	) );
+// }
+// add_action( 'widgets_init', 'new_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -124,7 +124,7 @@ function new_scripts() {
 
 	wp_register_style('bootstrap', get_template_directory_uri() . "/style/bootstrap.css" );
 
-	wp_register_style('new-style', get_stylesheet_uri());
+	wp_register_style('new-style', get_stylesheet_uri(), array('bootstrap'));
 
 	wp_enqueue_style('new-style', get_stylesheet_uri() );
 
@@ -166,7 +166,7 @@ require get_template_directory() . '/inc/jetpack.php';
  */
 function product_taxonomy() {
     register_taxonomy(
-        'vehicles_categories',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+        'vehicles_categories',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces).
         'vehicles',        //post type name
         array(
             'hierarchical' => true,
@@ -174,7 +174,7 @@ function product_taxonomy() {
             'query_var' => true,
             'rewrite' => array(
                 'slug' => 'vehicles', // This controls the base slug that will display before each term
-                'with_front' => false // Don't display the category base before 
+                'with_front' => false // Don't display the category base before
             )
         )
     );
@@ -196,20 +196,20 @@ function products_init() {
 		'all_items'          => __( 'All Vehicles'),
 		'search_items'       => __( 'Search Vehicles'),
 		'parent_item_colon'  => __( 'Parent Vehicles:'),
-		'not_found'          => __( 'No vehicles found.'),
-		'not_found_in_trash' => __( 'No vehicles found in Trash.')
+		'not_found'          => __( 'No Vehicles found.'),
+		'not_found_in_trash' => __( 'No Vehicles found in Trash.')
 	);
 
 	$args = array(
 		'labels'             => $labels,
-        'description'        => __( 'Description.' ),
+    'description'        => __( 'Description.' ),
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		'taxonomies'		 => array('vehicles_categories'),
-		'rewrite'            => array( 'slug' => 'vehicle' ),
+		'rewrite'            => array( 'slug' => 'vehicles' ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -225,7 +225,7 @@ function products_init() {
  */
 function location_taxonomy() {
     register_taxonomy(
-        'locations_regions',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+        'locations_regions',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces).
         'locations',        //post type name
         array(
             'hierarchical' => true,
@@ -233,7 +233,7 @@ function location_taxonomy() {
             'query_var' => true,
             'rewrite' => array(
                 'slug' => 'locations', // This controls the base slug that will display before each term
-                'with_front' => false // Don't display the category base before 
+                'with_front' => false // Don't display the category base before
             )
         )
     );
@@ -294,7 +294,7 @@ function number_generator($trans) {
 			case 'value':
 				# code...
 				break;
-			
+
 			default:
 				# code...
 				break;

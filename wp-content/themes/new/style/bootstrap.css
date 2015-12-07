@@ -2092,14 +2092,10 @@ pre code {
 }
 @media (min-width: 750px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
-
+    float: left;
   }
   .col-lg-12 {
     width: 100%;
-    display: box;
-    display: flexbox;
-    display: flex;
-    flex-wrap: wrap;
   }
   .col-lg-11 {
     width: 91.66666667%;
