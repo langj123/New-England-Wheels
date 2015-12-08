@@ -116,7 +116,7 @@ function new_scripts() {
 
 	wp_enqueue_script( 'new-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script('new-fonts', "https://use.typekit.net/och4sol.js", true);
+	wp_enqueue_script('new-fonts', "https://use.typekit.net/lcj4kqf.js", true);
 
 	wp_enqueue_script('new-fonts-try', get_template_directory_uri() . '/js/fonts-try.js', array('new-fonts'), true);
 
