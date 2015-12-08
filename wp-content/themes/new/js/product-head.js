@@ -5,7 +5,7 @@ jQuery(document).ready(function( $ ) {
 	imageCont = $('.section-head .image-container'),
 	finished = false,
 	duration = 400,
-	delay = 520;
+	delay = 300;
 
 	var headerAnimate = (function(){
 			var intv = setInterval(function(){

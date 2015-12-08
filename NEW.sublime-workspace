@@ -1,0 +1,668 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"site",
+				"site-footer"
+			],
+			[
+				"ma",
+				"max-width"
+			],
+			[
+				"col",
+				"col-lg-6"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"margin-",
+				"margin-top"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"te",
+				"text-indent"
+			],
+			[
+				"social",
+				"social_html"
+			],
+			[
+				"soci",
+				"social_html"
+			],
+			[
+				"block",
+				"blockquote"
+			],
+			[
+				"fnt",
+				"font-size"
+			],
+			[
+				"blo",
+				"blockquote"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"mari",
+				"margin-bottom"
+			],
+			[
+				"info-",
+				"info-sect-alt"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"res",
+				"rest_menu"
+			],
+			[
+				"rest",
+				"rest_card"
+			],
+			[
+				"menu",
+				"menu_items"
+			],
+			[
+				"men",
+				"menu_items"
+			],
+			[
+				"get_templ",
+				"get_template_directory_uri"
+			],
+			[
+				"after",
+				"after_setup_theme"
+			],
+			[
+				"is_in",
+				"is_int"
+			],
+			[
+				"v",
+				"v_gvwr"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"categ",
+				"categories_display"
+			],
+			[
+				"col-lg-",
+				"col-lg-6"
+			],
+			[
+				"$qur",
+				"$queried"
+			],
+			[
+				"WP_Quer",
+				"WP_Query"
+			],
+			[
+				"$tax",
+				"$taxonomy"
+			],
+			[
+				"get_term",
+				"get_term_link"
+			],
+			[
+				"get_template",
+				"get_template_part"
+			],
+			[
+				"cate",
+				"categories_display"
+			],
+			[
+				"cat",
+				"categories_display"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"product",
+				"product-run-down"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"footer",
+				"footer_menu"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"rgb",
+				"rgba()"
+			],
+			[
+				"imag",
+				"image-container"
+			],
+			[
+				"have",
+				"have_posts"
+			],
+			[
+				"tab",
+				"table-cell"
+			],
+			[
+				"register_taxono",
+				"register_taxonomy"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"get_temp",
+				"get_template_directory_uri"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"set html",
+				"Set Syntax: HTML"
+			],
+			[
+				"set php",
+				"Set Syntax: PHP"
+			],
+			[
+				"set htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 719.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/NEW/wp-content/themes/new/js/product-head.js",
+		"/Applications/MAMP/htdocs/NEW/wp-content/themes/new/style.css",
+		"/Applications/MAMP/htdocs/NEW/wp-content/themes/new/functions.php",
+		"/Users/jacob/Desktop/little.sql",
+		"/Applications/MAMP/htdocs/LBD/wp-config.php",
+		"/Applications/MAMP/htdocs/LBD/wp-content/themes/little-big-diner/functions.php",
+		"/Users/jacob/Sites/NEW/wp-config.php",
+		"/Users/jacob/Desktop/NEW.sql",
+		"/Users/jacob/Sites/LBD-2/wp-content/themes/little-big-diner/style.css",
+		"/Users/jacob/Sites/LBD-2/wp-content/themes/little-big-diner/js/lbd-scripts.js",
+		"/Users/jacob/Sites/LBD-2/wp-content/themes/little-big-diner/front-page.php",
+		"/Users/jacob/Sites/LBD-2/wp-content/themes/little-big-diner/template-parts/content-navigation.php",
+		"/Users/jacob/Sites/LBD-2/wp-content/themes/little-big-diner/header.php",
+		"/Users/jacob/Sites/LBD-2/wp-content/themes/little-big-diner/images/social-logos.svg",
+		"/Users/jacob/Sites/LBD-2/wp-content/themes/little-big-diner/functions.php",
+		"/Users/jacob/Sites/LBD-2/wp-content/themes/little-big-diner/footer.php",
+		"/Users/jacob/Sites/LBD-2/wp-content/themes/little-big-diner/template-parts/content-logo.php",
+		"/Users/jacob/Sites/LBD-2/wp-content/themes/little-big-diner/style/bootstrap.css",
+		"/Users/jacob/Sites/LBD-2/wp-content/themes/little-big-diner/template-parts/content-octie.php",
+		"/Users/jacob/Sites/LBD-2/wp-content/themes/little-big-diner/images/octie.svg",
+		"/Users/jacob/Sites/LBD-2/wp-includes/functions.php",
+		"/Users/jacob/Sites/LBD/wp-content/themes/little-big-diner/front-page.php",
+		"/Users/jacob/Sites/LBD/wp-content/themes/little-big-diner/single.php",
+		"/Users/jacob/Sites/LBD/wp-content/themes/little-big-diner/style.css",
+		"/Users/jacob/Sites/LBD/wp-config.php",
+		"/Users/jacob/Sites/LBD/wp-content/themes/little-big-diner/functions.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/template-parts/content-specs.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/header.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/taxonomy-vehicles_categories.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/template-parts/content-slider.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/front-page.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/template-parts/content-product-rundown.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/page-products.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/category-vehicles.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/functions.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/single-vehicles.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/footer.php",
+		"/Users/jacob/Desktop/front-page.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/template-parts/content-features.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/page-product.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/single-product.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/index.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/single.php",
+		"/Users/jacob/Sites/NEW/wp-content/themes/new/inc/custom-header.php",
+		"/Users/jacob/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"1s",
+			"transform",
+			"transform: scale(10);",
+			":before",
+			"#Contac-",
+			"#Contac",
+			"#Contact-sec",
+			"address",
+			"max-width",
+			"body",
+			".btn-link-alt",
+			"a:hover",
+			"site-footer",
+			"flex",
+			"site-footer",
+			"8",
+			"social",
+			"max-width",
+			"site-footer",
+			".info-sect-alt",
+			"info-sect",
+			"blockquote",
+			"transition",
+			"site-footer",
+			"media",
+			"max-width",
+			"body",
+			"site-footer",
+			"site-foooter",
+			"footer",
+			"st9",
+			"st8",
+			"st7",
+			"st6",
+			"st5",
+			"st4",
+			"st3",
+			"st2",
+			"st1",
+			"st0",
+			"addres",
+			"info-sect",
+			"info",
+			"fonts",
+			"340px)",
+			"media",
+			"font-size",
+			";\n",
+			"#Gift-card a {\n	color: #fff;\n}",
+			"main-navigation ul",
+			"navigation",
+			"$rest_card",
+			"elseif ($x == 1 && !empty($rest_card) && empty($rest_menu)) {\n					$html .= \"<li><a href='\" . $item->url . \"'>\" . $item->post_title . \"</a></li>\";\n					$html .= \"<li><a href='\" . $rest_menu . \"' target='_blank'>Menu</a></li>\";\n				}",
+			"if ($x == 1 && !empty($rest_menu)) {\n					$html .= \"<li><a href='\" . $rest_menu . \"' target='_blank'>Menu</a></li>\";\n					$html .= \"<li><a href='\" . $item->url . \"'>\" . $item->post_title . \"</a></li>\";\n				}",
+			"navigation",
+			"-color",
+			"head",
+			"<div class=\"col-lg-6\">\n				</div>",
+			"$data",
+			"post-thumbnails",
+			"											<",
+			"table",
+			"<tr>\n					<td></td>\n				</tr>",
+			"button",
+			"buttons",
+			"120px",
+			"-475px",
+			"-400px",
+			"transform: translateX(-400px);",
+			"zero",
+			"background",
+			"shadow",
+			"background",
+			"a {",
+			"a:visited",
+			"a {",
+			"link-button",
+			";\n",
+			"linear",
+			"background: linear-gradient(to bottom, rgba(2,12,18,0), rgba(2,12,18,0.95));",
+			"));",
+			"background: linear-gradient(to bottom, rgba(7,51,87,0), rgba(7,51,87,0.95));",
+			"modules",
+			"category_run_down_image",
+			"ul",
+			"footer",
+			"button",
+			"absol",
+			"navigation",
+			"media",
+			"vehicles",
+			"Vehicle",
+			"Vehicles",
+			"<?php if(get_field('hero_image')): ?>\n					<img src=\"<?php echo get_field('hero_image'); ?>\" />\n				<?php endif; ?>",
+			"Product",
+			"Products",
+			"products",
+			"Products",
+			"products",
+			");\n",
+			"  ",
+			"books",
+			"'your-plugin-textdomain'",
+			"'your-plugin-textdomain' ",
+			"Book",
+			"Genre",
+			"lrg",
+			"header",
+			"section",
+			"#page",
+			"page",
+			"site-branding",
+			"navigation",
+			"header",
+			"margin-top: 32px"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"newjs",
+				"wp-content/themes/new/js/product-head.js"
+			],
+			[
+				"function",
+				"wp-content/themes/new/functions.php"
+			],
+			[
+				"functio",
+				"wp-content/themes/little-big-diner/functions.php"
+			],
+			[
+				"navi",
+				"wp-content/themes/little-big-diner/template-parts/content-navigation.php"
+			],
+			[
+				"head",
+				"wp-content/themes/little-big-diner/header.php"
+			],
+			[
+				"scrip",
+				"wp-content/themes/little-big-diner/js/lbd-scripts.js"
+			],
+			[
+				"style",
+				"wp-content/themes/little-big-diner/style.css"
+			],
+			[
+				"script",
+				"wp-content/themes/little-big-diner/js/lbd-scripts.js"
+			],
+			[
+				"footer",
+				"wp-content/themes/little-big-diner/footer.php"
+			],
+			[
+				"navig",
+				"wp-content/themes/little-big-diner/template-parts/content-navigation.php"
+			],
+			[
+				"navigati",
+				"wp-content/themes/little-big-diner/template-parts/content-navigation.php"
+			],
+			[
+				"header",
+				"wp-content/themes/little-big-diner/header.php"
+			],
+			[
+				"scri",
+				"wp-content/themes/little-big-diner/js/lbd-scripts.js"
+			],
+			[
+				"funct",
+				"wp-content/themes/little-big-diner/functions.php"
+			],
+			[
+				"front-",
+				"wp-content/themes/little-big-diner/front-page.php"
+			],
+			[
+				"functions",
+				"wp-content/themes/little-big-diner/functions.php"
+			],
+			[
+				"front",
+				"wp-content/themes/little-big-diner/front-page.php"
+			],
+			[
+				"sty",
+				"wp-content/themes/little-big-diner/style.css"
+			],
+			[
+				"slid",
+				"template-parts/content-slider.php"
+			],
+			[
+				"",
+				"front-page.php"
+			],
+			[
+				"page",
+				"page-products.php"
+			],
+			[
+				"conten",
+				"template-parts/content-product-rundown.php"
+			],
+			[
+				"pr",
+				"page-products.php"
+			],
+			[
+				"product",
+				"template-parts/content-product-rundown.php"
+			],
+			[
+				"pro",
+				"page-products.php"
+			],
+			[
+				"cont",
+				"template-parts/content-slider.php"
+			],
+			[
+				"hea",
+				"header.php"
+			],
+			[
+				"sing",
+				"single-vehicles.php"
+			],
+			[
+				"heade",
+				"header.php"
+			],
+			[
+				"func",
+				"functions.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/jacob/Sites/NEW/wp-content/themes/new/NEW.sublime-project"
+			],
+			[
+				"we",
+				"/Users/jacob/Dropbox/Furley II/Projects/Webber Group/Site-Files/domains/WebberRestaurantGroup.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 317.0,
+	"status_bar_visible": true
+}
