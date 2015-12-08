@@ -130,6 +130,8 @@ function new_scripts() {
 
 	if (is_tax('vehicles_categories')) {
 		wp_enqueue_script( 'new-product-spec', get_template_directory_uri() . '/js/product-spec.js', array('jquery'), true );
+
+		wp_enqueue_script( 'new-product-head', get_template_directory_uri() . '/js/product-head.js', array('jquery'), true );
 	}
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -173,8 +175,8 @@ function product_taxonomy() {
             'label' => 'Vehicles Categories',  //Display name
             'query_var' => true,
             'rewrite' => array(
-                'slug' => 'vehicles', // This controls the base slug that will display before each term
-                'with_front' => false // Don't display the category base before
+                'slug' => 'vehicle-types', // This controls the base slug that will display before each term
+                'with_front' => true // Don't display the category base before
             )
         )
     );
@@ -202,14 +204,14 @@ function products_init() {
 
 	$args = array(
 		'labels'             => $labels,
-    'description'        => __( 'Description.' ),
+    	'description'        => __( 'Description.' ),
 		'public'             => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		'taxonomies'		 => array('vehicles_categories'),
-		'rewrite'            => array( 'slug' => 'vehicles' ),
+		'rewrite'            => array( 'slug' => 'vehicles', 'with_front' => false ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -219,7 +221,6 @@ function products_init() {
 
 	register_post_type( 'vehicles', $args );
 }
-
 /**
  * Register Custom Post Types & Taxonomies for locations
  */
@@ -232,8 +233,8 @@ function location_taxonomy() {
             'label' => 'Locations Regions',  //Display name
             'query_var' => true,
             'rewrite' => array(
-                'slug' => 'locations', // This controls the base slug that will display before each term
-                'with_front' => false // Don't display the category base before
+                'slug' => 'location-overview', // This controls the base slug that will display before each term
+                'with_front' => true // Don't display the category base before
             )
         )
     );
@@ -268,7 +269,7 @@ function location_init() {
 		'show_in_menu'       => true,
 		'query_var'          => true,
 		'taxonomies'		 => array('locations_regions'),
-		'rewrite'            => array( 'slug' => 'locations' ),
+		'rewrite'            => array( 'slug' => 'locations', 'with_front' => false ),
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
@@ -278,17 +279,26 @@ function location_init() {
 
 	register_post_type( 'locations', $args );
 }
-
 /*
-*Register any scripts
+*	Custom Settings for Vehicles Page
+*
 */
+if (function_exists('acf_add_options_page')) {
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Page Settings',
+		'menu_title' 	=> 'Vehicle Page Settings',
+		'parent_slug' 	=> 'edit.php?post_type=vehicles',
+	));
+
+}
 
 /*
 * Number generator function
 */
 function number_generator($trans) {
 	$number = 0;
-	if (is_int(trans)) {
+	if (is_int($trans)) {
 		$numbers = array("zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twevle", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninety", "one hundred");
 		switch ($trans) {
 			case 'value':
@@ -374,3 +384,21 @@ function table_of_specs($q) {
 	}
 }
 add_filter('after_setup_theme', 'table_of_specs');
+/*
+*
+* Redirects
+*
+*/
+/**
+* Redirect All non homepage requests
+*/
+ function new_page_template_redirect()
+{
+    if( is_tax('locations_regions') || is_singular('locations') )
+    {
+        wp_redirect( get_post_type_archive_link('locations'));
+        exit();
+    }
+}
+add_action( 'template_redirect', 'new_page_template_redirect' );
+

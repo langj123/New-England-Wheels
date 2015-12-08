@@ -21,6 +21,7 @@ $query = new WP_Query( $args );
 	<?php if (function_exists('get_field')) : ?>
 	<header class="section-head">
 		<div class="image-container" style="background-image: url(<?php echo get_field('category_hero_image', $tax); ?>);">
+			<div class="product-head-desc">
 			<?php 
 			if ($queried->name) :
 			?>
@@ -39,6 +40,7 @@ $query = new WP_Query( $args );
 
 			</p>
 			<?php endif; ?>
+			</div><!-- product-head-desc -->
 		</div>
 	</header><!-- header -->
 	<?php endif; ?>

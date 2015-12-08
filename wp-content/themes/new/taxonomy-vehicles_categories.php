@@ -5,7 +5,6 @@
  */
 get_header(); ?>
 	<div id="primary" class="content-area">
-		What is up?
 		<main id="main" class="site-main" role="main">
 			<?php get_template_part('template-parts/content', 'vehicles' );?>
 		</main><!-- #main -->

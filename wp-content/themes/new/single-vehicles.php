@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * The template for displaying all vehicle posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -19,7 +19,6 @@ get_header(); ?>
 					<h1 class="product-title"><?php the_title(); ?>
 						<?php if (get_field('vehicle_sub_header')) : echo "<br />" . get_field('vehicle_sub_header'); endif; ?>
 					</h1>
-
 					<img src="<?php echo get_field('hero_image'); ?>" />
 				</div><!-- image-containter -->
 				<?php endif; ?>

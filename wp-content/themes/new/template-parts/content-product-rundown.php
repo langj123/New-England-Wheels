@@ -8,7 +8,7 @@ $terms = get_terms($taxonomy);
 ?>
 
 				<section class="module-new product-run-down">
-					<header class="section-head">
+					<header>
 						<h2>Vehicle Categories</h2>
 					</header>
 					<div class="overview-cont">
@@ -30,7 +30,6 @@ $terms = get_terms($taxonomy);
 									$cat_title = $term->name;
 									$tax = $term->taxonomy . "_" . $term->term_id;
 						?>
-
 								<div class="<?php echo $class; ?>">
 
 									<div class="image-container" style="background-image: url(<?php echo get_field('category_run_down_image', $tax); ?>);">
@@ -47,6 +46,6 @@ $terms = get_terms($taxonomy);
 								<?php
 								$i++;
 							}
-					?>
+						?>
 					</div><!-- overview-cont -->
 				</section><!-- overview -->

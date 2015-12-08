@@ -26,11 +26,11 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="wrapper">
 
-			<div class="site-branding col-lg-3">
+			<div class="site-branding col-lg-1">
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation col-lg-9" role="navigation">
+			<nav id="site-navigation" class="main-navigation col-lg-11" role="navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'new' ); ?></button>
 				<?php wp_nav_menu( array(
 				'theme_location' => 'primary',

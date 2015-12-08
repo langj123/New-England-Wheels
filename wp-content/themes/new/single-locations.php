@@ -8,8 +8,8 @@
  */
 
 get_header(); ?>
-	hhjajdfasd
 	<div id="primary" class="content-area">
+		Not working
 		<main id="main" class="site-main" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<header class="product-header">
